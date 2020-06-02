@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+
+
+    <Button
+        android:id="@+id/btn_capture_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/capture_image"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_above="@id/btn_select_image"
+        android:background="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_image"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_above="@id/btn_detect_text"
+        android:background="@color/colorPrimaryDark"/>
+
+    <Button
+        android:id="@+id/btn_detect_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detect_text"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"/>
+
+</RelativeLayout>

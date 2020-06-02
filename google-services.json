@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "69325421490",
+    "firebase_url": "https://tupatane-b1416.firebaseio.com",
+    "project_id": "tupatane-b1416",
+    "storage_bucket": "tupatane-b1416.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69325421490:android:85a4611bf2249e86f602ab",
+        "android_client_info": {
+          "package_name": "com.example.theocrreader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69325421490-6569e93oa7mfveidnn8vdvo8g1odulsb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.theocrreader",
+            "certificate_hash": "150fb6d619b5a531328f5a921839e73fcb93cc8b"
+          }
+        },
+        {
+          "client_id": "69325421490-ql7pi6hhf9ttrvqqdhss9nnuju2cksj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0ZBZGFay8ni7y-Xmd_2phGSWCDh8B1Y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69325421490-ql7pi6hhf9ttrvqqdhss9nnuju2cksj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

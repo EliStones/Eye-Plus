@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">theOCR Reader</string>
+    <string name="detect_text">Detect text</string>
+    <string name="capture_image">Capture image</string>
+    <string name="text_is_displayed_here">Text is displayed here</string>
+    <string name="select_image">Select Image</string>
+    <string name="detected_text">Detected Text</string>
+</resources>

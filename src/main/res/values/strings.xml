@@ -5,4 +5,7 @@
     <string name="text_is_displayed_here">Text is displayed here</string>
     <string name="select_image">Select Image</string>
     <string name="detected_text">Detected Text</string>
+    <string name="rate_the_accuracy">Rate the accuracy</string>
+    <string name="long_press_to_copy_detected_text">Long press to copy detected text</string>
+    <string name="find_detected_text_here">Find detected text here</string>
 </resources>

@@ -16,6 +16,7 @@ import android.view.ContextMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
+import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.io.IOException;
 import java.util.List;
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static String MY_MESSAGE_KEY = "my message";
 
+    private RatingBar mRatingBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnDetectText = findViewById(R.id.btn_detect_text);
         imageView = findViewById(R.id.image_view);
         btnSelectImage = findViewById(R.id.btn_select_image);
+        mRatingBar = findViewById(R.id.ratingBar1);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
             }
         });
+
         btnSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView) v;
         ClipboardManager manager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         ClipData clipData = ClipData.newPlainText("text", textView.getText());
-        manager.setPrimaryClip(clipData);
+        if (manager != null) {
+            manager.setPrimaryClip(clipData);
+        }
     }
 
     private void dispatchTakePictureIntent() {
@@ -146,15 +154,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayTextFromImage(FirebaseVisionText firebaseVisionText) {
+        detectedText = ""; //Clear all previously detected text
         List<FirebaseVisionText.Block> blockList = firebaseVisionText.getBlocks();
         if (blockList.size() == 0  ) {
             Toast.makeText(MainActivity.this, "No text found in image", Toast.LENGTH_SHORT).show();
         } else {
             for (FirebaseVisionText.Block block : firebaseVisionText.getBlocks()) {
-                //Pass this code to a new page
-                detectedText = block.getText();
+                if(detectedText == null){
+                    detectedText = block.getText();
+                }
+                else {
+                    detectedText = detectedText + block.getText();
+                }
 
             }
+
+            //Pass this code to a new page
             Intent myIntent = new Intent(MainActivity.this, DisplayText.class);
             myIntent.putExtra(MY_MESSAGE_KEY, detectedText);
             startActivity(myIntent);

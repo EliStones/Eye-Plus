@@ -1,0 +1,18 @@
+Student Name: Elisha Mbadi - ICS3B - 108544
+
+School: Strathmore University 
+
+App Name: EyePlus
+
+Dependencies: Firebase ML Kit - Vision
+
+This app is submitted in total fulfillment of CAT 1 requirements and is eligible for grading.
+
+Eyeplus is an app that allows users to detect text from images on their device thanks to the Firebase MLKit LIbrary and my application.
+
+Users can select images either from their camera or their gallery. The image is then previewed to the user, who can then detect text from it.
+
+Incase no text can be found, the app shows an alert that the image has no detectable text.
+
+Comments and additions are highly appreciated.
+Email: elisha.mbadi@strathmore.edu.
